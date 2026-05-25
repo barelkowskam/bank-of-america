@@ -33,10 +33,10 @@ export class MatxHighlightDirective implements OnInit, OnChanges, OnDestroy {
     this.unsubscribeAll = new Subject();
   }
   // Inner highlighted html
-  highlightedCode: string = '';
+  highlightedCode = '';
 
-  @Input() path: string = '';
-  @Input("matxHighlight") code: string = '';
+  @Input() path = '';
+  @Input("matxHighlight") code = '';
   private unsubscribeAll: Subject<any>;
   @Input() languages: string[] = [];
 

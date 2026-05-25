@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AutoHideTooltipComponent } from './auto-hide-tooltip.component';
 
@@ -8,6 +11,8 @@ describe('AutoHideTooltipComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [MatTooltipModule, NoopAnimationsModule],
       declarations: [ AutoHideTooltipComponent ]
     })
     .compileComponents();

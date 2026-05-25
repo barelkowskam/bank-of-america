@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class Notifications2Service {
-  isPanelOpen: boolean = false;
+  isPanelOpen = false;
   
   constructor() { }
 }

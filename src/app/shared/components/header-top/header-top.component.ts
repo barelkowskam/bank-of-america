@@ -39,12 +39,12 @@ export class HeaderTopComponent implements OnInit, OnDestroy {
     this.menuItemSub = this.navService.menuItems$
     .subscribe(res => {
       res = res.filter(item => item.type !== 'icon' && item.type !== 'separator');
-      let limit = 4
-      let mainItems:any[] = res.slice(0, limit)
+      const limit = 4
+      const mainItems:any[] = res.slice(0, limit)
       if(res.length <= limit) {
         return this.menuItems = mainItems
       }
-      let subItems:any[] = res.slice(limit, res.length - 1)
+      const subItems:any[] = res.slice(limit, res.length - 1)
       mainItems.push({
         name: 'More',
         type: 'dropDown',

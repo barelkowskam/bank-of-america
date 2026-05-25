@@ -15,35 +15,35 @@ export class ScrollToDirective implements OnInit {
     // Internet Explorer 6, 7 and 8
     if (document.body.scrollTop) return document.body.scrollTop;
     return 0;
-  };
+  }
 
   elmYPosition(eID) {
-    var elm = document.getElementById(eID);
-    var y = elm.offsetTop;
-    var node: any = elm;
+    const elm = document.getElementById(eID);
+    let y = elm.offsetTop;
+    let node: any = elm;
     while (node.offsetParent && node.offsetParent != document.body) {
       node = node.offsetParent;
       y += node.offsetTop;
     }
     return y;
-  };
+  }
 
   @HostListener('click', ['$event'])
   smoothScroll() {
     if(!this.elmID)
       return;
-    var startY = this.currentYPosition();
-    var stopY = this.elmYPosition(this.elmID);
-    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    const startY = this.currentYPosition();
+    const stopY = this.elmYPosition(this.elmID);
+    const distance = stopY > startY ? stopY - startY : startY - stopY;
     if (distance < 100) {
       scrollTo(0, stopY);
       return;
     }
-    var speed = Math.round(distance / 50);
+    let speed = Math.round(distance / 50);
     if (speed >= 20) speed = 20;
-    var step = Math.round(distance / 25);
-    var leapY = stopY > startY ? startY + step : startY - step;
-    var timer = 0;
+    const step = Math.round(distance / 25);
+    let leapY = stopY > startY ? startY + step : startY - step;
+    let timer = 0;
     if (stopY > startY) {
       for (var i = startY; i < stopY; i += step) {
         setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
@@ -60,5 +60,5 @@ export class ScrollToDirective implements OnInit {
       timer++;
     }
     return false;
-  };
+  }
 }

@@ -31,7 +31,7 @@ export class CustomizerComponent implements OnInit {
 
   layoutConf:any = {};
   selectedMenu = 'icon-menu';
-  selectedLayout: string = '';
+  selectedLayout = '';
   isTopbarFixed = false;
   isFooterFixed = false;
   isRTL = false;
@@ -70,7 +70,7 @@ export class CustomizerComponent implements OnInit {
     this.layout.publishLayoutChange({ topbarFixed: data.checked });
   }
   toggleDir(data: any) {
-    let dir = data.checked ? 'rtl' : 'ltr';
+    const dir = data.checked ? 'rtl' : 'ltr';
     this.layout.publishLayoutChange({ dir: dir });
   }
   tooglePerfectScrollbar(data: any) {

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ConfigurableToggleComponent } from './configurable-toggle.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ConfigurableToggleComponent', () => {
   let component: ConfigurableToggleComponent;
@@ -8,6 +10,8 @@ describe('ConfigurableToggleComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ ConfigurableToggleComponent ]
     })
     .compileComponents();

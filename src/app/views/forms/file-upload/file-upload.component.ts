@@ -8,7 +8,7 @@ import { FileUploader } from 'ng2-file-upload';
 })
 export class FileUploadComponent implements OnInit {
   public uploader: FileUploader = new FileUploader({ url: 'https://evening-anchorage-315.herokuapp.com/api/' });
-  public hasBaseDropZoneOver: boolean = false;
+  public hasBaseDropZoneOver = false;
   console = console;
   constructor() { }
 

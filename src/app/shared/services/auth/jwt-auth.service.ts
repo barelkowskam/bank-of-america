@@ -23,10 +23,10 @@ const DEMO_USER: User = {
 })
 export class JwtAuthService {
   token;
-  isAuthenticated: Boolean;
+  isAuthenticated: boolean;
   user: User = {};
   user$ = (new BehaviorSubject<User>(this.user));
-  signingIn: Boolean;
+  signingIn: boolean;
   return: string;
   JWT_TOKEN = "JWT_TOKEN";
   APP_USER = "MATX_USER";
@@ -112,7 +112,7 @@ export class JwtAuthService {
     this.router.navigateByUrl("sessions/signin");
   }
 
-  isLoggedIn(): Boolean {
+  isLoggedIn(): boolean {
     return !!this.getJwtToken();
   }
 
@@ -123,7 +123,7 @@ export class JwtAuthService {
     return this.ls.getItem(this.APP_USER);
   }
 
-  setUserAndToken(token: String, user: User, isAuthenticated: Boolean) {
+  setUserAndToken(token: string, user: User, isAuthenticated: boolean) {
     this.isAuthenticated = isAuthenticated;
     this.token = token;
     this.user = user;

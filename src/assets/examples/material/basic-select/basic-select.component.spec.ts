@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BasicSelectComponent } from './basic-select.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('BasicSelectComponent', () => {
   let component: BasicSelectComponent;
@@ -8,6 +10,8 @@ describe('BasicSelectComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ BasicSelectComponent ]
     })
     .compileComponents();

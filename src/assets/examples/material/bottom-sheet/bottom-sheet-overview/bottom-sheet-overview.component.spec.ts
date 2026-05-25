@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BottomSheetOverviewComponent } from './bottom-sheet-overview.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
 
 describe('BottomSheetOverviewComponent', () => {
   let component: BottomSheetOverviewComponent;
@@ -8,6 +11,9 @@ describe('BottomSheetOverviewComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+            schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
+      providers: [{ provide: MatBottomSheetRef, useValue: {} }],
       declarations: [ BottomSheetOverviewComponent ]
     })
     .compileComponents();

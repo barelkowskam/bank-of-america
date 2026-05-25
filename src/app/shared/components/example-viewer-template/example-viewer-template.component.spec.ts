@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { ExampleViewerTemplateComponent } from './example-viewer-template.component';
+import { MatxExampleViewerTemplateComponent as ExampleViewerTemplateComponent } from './example-viewer-template.component';
 
 describe('ExampleViewerTemplateComponent', () => {
   let component: ExampleViewerTemplateComponent;
@@ -8,6 +10,8 @@ describe('ExampleViewerTemplateComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      providers: [{ provide: ActivatedRoute, useValue: { snapshot: { params: {} } } }],
       declarations: [ ExampleViewerTemplateComponent ]
     })
     .compileComponents();

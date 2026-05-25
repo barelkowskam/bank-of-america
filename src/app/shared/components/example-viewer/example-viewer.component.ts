@@ -13,7 +13,7 @@ export class MatxExampleViewerComponent implements OnInit, AfterViewInit, OnDest
   componentPath: string;
 
   // Component ID
-  @Input("exampleId")
+  @Input()
   set exampleId(exampleId: string) {
     if (exampleId) {
       this._exampleId = exampleId;
@@ -22,10 +22,10 @@ export class MatxExampleViewerComponent implements OnInit, AfterViewInit, OnDest
     }
   }
   // Title and component Ref
-  @Input('data') data: any;
+  @Input() data: any;
 
   // Component Directory path
-  @Input('path') path: any;
+  @Input() path: any;
 
   get exampleId(): string {
     return this._exampleId;
@@ -47,7 +47,7 @@ export class MatxExampleViewerComponent implements OnInit, AfterViewInit, OnDest
       console.log('EXAMPLE COMPONENT MISSING');
       return;
     }
-    let componentFactory = this.cfr.resolveComponentFactory(this.data.component);
+    const componentFactory = this.cfr.resolveComponentFactory(this.data.component);
     this.exampleViewRef = this.exampleContainer.createComponent(componentFactory);
   }
   ngOnDestroy() {

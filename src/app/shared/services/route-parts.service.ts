@@ -17,7 +17,7 @@ export class RoutePartsService {
   ngOnInit() {
   }
   generateRouteParts(snapshot: ActivatedRouteSnapshot): IRoutePart[] {
-    var routeParts = <IRoutePart[]>[];
+    let routeParts = <IRoutePart[]>[];
     if (snapshot) {
       if (snapshot.firstChild) {
         routeParts = routeParts.concat(this.generateRouteParts(snapshot.firstChild));

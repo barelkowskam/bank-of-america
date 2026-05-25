@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BasicIconComponent } from './basic-icon.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('BasicIconComponent', () => {
   let component: BasicIconComponent;
@@ -8,6 +10,8 @@ describe('BasicIconComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ BasicIconComponent ]
     })
     .compileComponents();

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SelectionTableComponent } from './selection-table.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SelectionTableComponent', () => {
   let component: SelectionTableComponent;
@@ -8,6 +10,8 @@ describe('SelectionTableComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ SelectionTableComponent ]
     })
     .compileComponents();

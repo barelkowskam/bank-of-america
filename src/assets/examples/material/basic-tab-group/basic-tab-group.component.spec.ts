@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BasicTabGroupComponent } from './basic-tab-group.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('BasicTabGroupComponent', () => {
   let component: BasicTabGroupComponent;
@@ -8,6 +10,8 @@ describe('BasicTabGroupComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ BasicTabGroupComponent ]
     })
     .compileComponents();

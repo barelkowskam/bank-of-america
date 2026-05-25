@@ -19,7 +19,7 @@ import { JwtAuthService } from '../../../services/auth/jwt-auth.service';
   templateUrl: './admin-layout.template.html',
 })
 export class AdminLayoutComponent implements OnInit, AfterViewInit {
-  public isModuleLoading: Boolean = false;
+  public isModuleLoading = false;
   private moduleLoaderSub: Subscription;
   private layoutConfSub: Subscription;
   private routerEventSub: Subscription;

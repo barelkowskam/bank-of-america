@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BasicSidenavComponent } from './basic-sidenav.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('BasicSidenavComponent', () => {
   let component: BasicSidenavComponent;
@@ -8,6 +10,8 @@ describe('BasicSidenavComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ BasicSidenavComponent ]
     })
     .compileComponents();

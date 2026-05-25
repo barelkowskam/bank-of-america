@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { ResultPageComponent } from './result-page.component';
 
@@ -8,6 +10,8 @@ describe('ResultPageComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [HttpClientTestingModule],
       declarations: [ ResultPageComponent ]
     })
     .compileComponents();

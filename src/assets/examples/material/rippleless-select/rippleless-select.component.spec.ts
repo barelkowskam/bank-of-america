@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { RipplelessSelectComponent } from './rippleless-select.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('RipplelessSelectComponent', () => {
   let component: RipplelessSelectComponent;
@@ -8,6 +10,8 @@ describe('RipplelessSelectComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ RipplelessSelectComponent ]
     })
     .compileComponents();

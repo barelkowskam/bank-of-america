@@ -25,22 +25,22 @@ import { PerfectScrollbarEvent, PerfectScrollbarEvents,
 export class PerfectScrollbarComponent implements OnInit, OnDestroy, DoCheck {
   public states: any = {};
 
-  public indicatorX: boolean = false;
-  public indicatorY: boolean = false;
+  public indicatorX = false;
+  public indicatorY = false;
 
-  public interaction: boolean = false;
+  public interaction = false;
 
-  private scrollPositionX: number = 0;
-  private scrollPositionY: number = 0;
+  private scrollPositionX = 0;
+  private scrollPositionY = 0;
 
-  private scrollDirectionX: number = 0;
-  private scrollDirectionY: number = 0;
+  private scrollDirectionX = 0;
+  private scrollDirectionY = 0;
 
-  private usePropagationX: boolean = false;
-  private usePropagationY: boolean = false;
+  private usePropagationX = false;
+  private usePropagationY = false;
 
-  private allowPropagationX: boolean = false;
-  private allowPropagationY: boolean = false;
+  private allowPropagationX = false;
+  private allowPropagationY = false;
 
   private stateTimeout: number | null = null;
 
@@ -48,15 +48,15 @@ export class PerfectScrollbarComponent implements OnInit, OnDestroy, DoCheck {
 
   private readonly stateUpdate: Subject<string> = new Subject();
 
-  @Input() disabled: boolean = false;
+  @Input() disabled = false;
 
-  @Input() usePSClass: boolean = true;
+  @Input() usePSClass = true;
 
   @HostBinding('class.ps-show-limits')
-  @Input() autoPropagation: boolean = false;
+  @Input() autoPropagation = false;
 
   @HostBinding('class.ps-show-active')
-  @Input() scrollIndicators: boolean = false;
+  @Input() scrollIndicators = false;
 
   @Input() config?: PerfectScrollbarConfigInterface;
 
@@ -269,11 +269,11 @@ export class PerfectScrollbarComponent implements OnInit, OnDestroy, DoCheck {
       event.stopPropagation();
     }
 
-    if (!!deltaX) {
+    if (deltaX) {
       this.scrollDirectionX = scrollDirectionX;
     }
 
-    if (!!deltaY) {
+    if (deltaY) {
       this.scrollDirectionY = scrollDirectionY;
     }
 

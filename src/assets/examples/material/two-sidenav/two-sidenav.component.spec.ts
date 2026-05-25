@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TwoSidenavComponent } from './two-sidenav.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TwoSidenavComponent', () => {
   let component: TwoSidenavComponent;
@@ -8,6 +10,8 @@ describe('TwoSidenavComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ TwoSidenavComponent ]
     })
     .compileComponents();

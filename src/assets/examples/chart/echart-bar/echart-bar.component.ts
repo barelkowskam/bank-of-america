@@ -58,7 +58,7 @@ export class EchartBarComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    for (var i = 0; i < this.data.length; i++) {
+    for (let i = 0; i < this.data.length; i++) {
       this.dataShadow.push(this.yMax);
     }
   }
