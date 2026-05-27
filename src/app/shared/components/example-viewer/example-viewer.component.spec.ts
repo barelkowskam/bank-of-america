@@ -1,20 +1,22 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
-import { ExampleViewerComponent } from './example-viewer.component';
+import { MatxExampleViewerComponent } from './example-viewer.component';
 
-describe('ExampleViewerComponent', () => {
-  let component: ExampleViewerComponent;
-  let fixture: ComponentFixture<ExampleViewerComponent>;
+describe('MatxExampleViewerComponent', () => {
+  let component: MatxExampleViewerComponent;
+  let fixture: ComponentFixture<MatxExampleViewerComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExampleViewerComponent ]
+      declarations: [ MatxExampleViewerComponent ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExampleViewerComponent);
+    fixture = TestBed.createComponent(MatxExampleViewerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

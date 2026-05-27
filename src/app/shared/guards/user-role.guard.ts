@@ -6,7 +6,7 @@ import {
   Router,
 } from "@angular/router";
 import { JwtAuthService } from "../services/auth/jwt-auth.service";
-import { MatSnackBar } from "@angular/material/snack-bar";
+import { MatLegacySnackBar as MatSnackBar } from "@angular/material/legacy-snack-bar";
 
 @Injectable()
 export class UserRoleGuard implements CanActivate {

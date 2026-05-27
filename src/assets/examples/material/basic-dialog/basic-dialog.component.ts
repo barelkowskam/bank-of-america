@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { BasicDialogOverviewComponent } from './basic-dialog-overview/basic-dialog-overview.component';
 
 export interface DialogData {
