@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { SearchInputOverComponent } from './search-input-over.component';
 
@@ -8,7 +10,9 @@ describe('SearchInputOverComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchInputOverComponent ]
+      imports: [ ReactiveFormsModule ],
+      declarations: [ SearchInputOverComponent ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));

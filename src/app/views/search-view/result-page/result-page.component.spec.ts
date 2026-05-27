@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { ResultPageComponent } from './result-page.component';
+import { SearchService } from 'app/shared/search/search.service';
+import { CountryService } from '../country.service';
 
 describe('ResultPageComponent', () => {
   let component: ResultPageComponent;
@@ -8,7 +12,10 @@ describe('ResultPageComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResultPageComponent ]
+      imports: [ HttpClientTestingModule ],
+      declarations: [ ResultPageComponent ],
+      providers: [ SearchService, CountryService ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));

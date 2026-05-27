@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
 
 import { BottomSheetShareComponent } from './bottom-sheet-share.component';
 
@@ -8,7 +10,11 @@ describe('BottomSheetShareComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ BottomSheetShareComponent ]
+      declarations: [ BottomSheetShareComponent ],
+      providers: [
+        { provide: MatBottomSheetRef, useValue: {} }
+      ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));

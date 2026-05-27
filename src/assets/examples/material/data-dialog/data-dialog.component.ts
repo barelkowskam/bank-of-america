@@ -1,4 +1,4 @@
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { Component, OnInit } from '@angular/core';
 import { DataDialogOverviewComponent } from './data-dialog-overview/data-dialog-overview.component';
 
