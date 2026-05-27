@@ -83,7 +83,7 @@ export class CustomizerService {
   }
 
   getSidebarColors() {
-    let sidebarColors = ['black', 'slate', 'white', 'grey', 'brown', 'purple', 'dark-blue',];
+    const sidebarColors = ['black', 'slate', 'white', 'grey', 'brown', 'purple', 'dark-blue',];
     return this.colors.filter(color => {
       return sidebarColors.includes(color.class);
     })
@@ -94,7 +94,7 @@ export class CustomizerService {
   }
 
   getTopbarColors() {
-    let topbarColors = ['black', 'slate', 'white', 'dark-gray', 'purple', 'dark-blue', 'indigo', 'pink', 'red', 'yellow', 'green'];
+    const topbarColors = ['black', 'slate', 'white', 'dark-gray', 'purple', 'dark-blue', 'indigo', 'pink', 'red', 'yellow', 'green'];
     return this.colors.filter(color => {
       return topbarColors.includes(color.class);
     })
@@ -105,7 +105,7 @@ export class CustomizerService {
   }
 
   getFooterColors() {
-    let footerColors = ['black', 'slate', 'white', 'dark-gray', 'purple', 'dark-blue', 'indigo', 'pink', 'red', 'yellow', 'green'];
+    const footerColors = ['black', 'slate', 'white', 'dark-gray', 'purple', 'dark-blue', 'indigo', 'pink', 'red', 'yellow', 'green'];
     return this.colors.filter(color => {
       return footerColors.includes(color.class);
     })
@@ -136,7 +136,7 @@ export class CustomizerService {
     if (!el.length) {
       el.classList.remove(className);
     } else {
-      for (var i = 0; i < el.length; i++) {
+      for (let i = 0; i < el.length; i++) {
         el[i].classList.remove(className);
       }
     }
@@ -146,7 +146,7 @@ export class CustomizerService {
     if (!el.length) {
       el.classList.add(className);
     } else {
-      for (var i = 0; i < el.length; i++) {
+      for (let i = 0; i < el.length; i++) {
         el[i].classList.add(className);
       }
     }
@@ -154,7 +154,7 @@ export class CustomizerService {
   findClosest(el, className) {
     if (!el) return;
     while (el) {
-      var parent = el.parentElement;
+      const parent = el.parentElement;
       if (parent && this.hasClass(parent, className)) {
         return parent;
       }

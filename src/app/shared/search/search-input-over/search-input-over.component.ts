@@ -22,9 +22,9 @@ import { AutoFocusDirective } from "app/shared/directives/auto-focus.directive";
 export class SearchInputOverComponent implements OnInit, OnDestroy {
   isOpen: boolean;
   @ViewChildren(AutoFocusDirective) searchInput;
-  @Input('resultPage') resultPage: string;
-  @Input('placeholder') placeholder: string = "Search here";
-  @Output("search") search = new EventEmitter();
+  @Input() resultPage: string;
+  @Input() placeholder = "Search here";
+  @Output() search = new EventEmitter();
   searchCtrl = new UntypedFormControl();
   searchCtrlSub: Subscription;
   constructor(

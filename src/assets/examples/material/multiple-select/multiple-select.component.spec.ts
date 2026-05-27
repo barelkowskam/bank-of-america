@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MultipleSelectComponent } from './multiple-select.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('MultipleSelectComponent', () => {
   let component: MultipleSelectComponent;
@@ -8,6 +10,8 @@ describe('MultipleSelectComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ MultipleSelectComponent ]
     })
     .compileComponents();

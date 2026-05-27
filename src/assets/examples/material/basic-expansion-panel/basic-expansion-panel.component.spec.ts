@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BasicExpansionPanelComponent } from './basic-expansion-panel.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('BasicExpansionPanelComponent', () => {
   let component: BasicExpansionPanelComponent;
@@ -8,6 +10,8 @@ describe('BasicExpansionPanelComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ BasicExpansionPanelComponent ]
     })
     .compileComponents();

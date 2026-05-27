@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { ExampleViewerComponent } from './example-viewer.component';
+import { MatxExampleViewerComponent as ExampleViewerComponent } from './example-viewer.component';
 
 describe('ExampleViewerComponent', () => {
   let component: ExampleViewerComponent;

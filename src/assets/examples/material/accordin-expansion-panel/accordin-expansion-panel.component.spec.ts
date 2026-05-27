@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AccordinExpansionPanelComponent } from './accordin-expansion-panel.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AccordinExpansionPanelComponent', () => {
   let component: AccordinExpansionPanelComponent;
@@ -8,6 +10,8 @@ describe('AccordinExpansionPanelComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ AccordinExpansionPanelComponent ]
     })
     .compileComponents();

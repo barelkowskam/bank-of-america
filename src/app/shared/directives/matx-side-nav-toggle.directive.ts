@@ -27,7 +27,7 @@ export class MatxSideNavToggleDirective implements OnInit, OnDestroy {
   }
 
   updateSidenav() {
-    var self = this;
+    const self = this;
     setTimeout(() => {
       self.sideNav.opened = !self.isMobile;
       self.sideNav.mode = self.isMobile ? 'over' : 'side';

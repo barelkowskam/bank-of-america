@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ThemeService } from 'app/shared/services/theme.service';
 
 import { AnalyticsComponent } from './analytics.component';
 
@@ -8,6 +10,8 @@ describe('AnalyticsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      providers: [ThemeService],
       declarations: [ AnalyticsComponent ]
     })
     .compileComponents();

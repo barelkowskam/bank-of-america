@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ScrollableDialogOverviewComponent } from './scrollable-dialog-overview.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ScrollableDialogOverviewComponent', () => {
   let component: ScrollableDialogOverviewComponent;
@@ -8,6 +10,8 @@ describe('ScrollableDialogOverviewComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ ScrollableDialogOverviewComponent ]
     })
     .compileComponents();

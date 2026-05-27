@@ -34,7 +34,7 @@ export class PerfectScrollbarDirective implements OnInit, OnDestroy, DoCheck, On
 
   private readonly ngDestroy: Subject<void> = new Subject();
 
-  @Input() disabled: boolean = false;
+  @Input() disabled = false;
 
   @Input('perfectScrollbar') config?: PerfectScrollbarConfigInterface;
 
@@ -173,7 +173,7 @@ export class PerfectScrollbarDirective implements OnInit, OnDestroy, DoCheck, On
     }
   }
 
-  public geometry(prefix: string = 'scroll'): Geometry {
+  public geometry(prefix = 'scroll'): Geometry {
     return new Geometry(
       this.elementRef.nativeElement[prefix + 'Left'],
       this.elementRef.nativeElement[prefix + 'Top'],
@@ -182,7 +182,7 @@ export class PerfectScrollbarDirective implements OnInit, OnDestroy, DoCheck, On
     );
   }
 
-  public position(absolute: boolean = false): Position {
+  public position(absolute = false): Position {
     if (!absolute && this.instance) {
       return new Position(
         this.instance.reach.x || 0,
@@ -196,7 +196,7 @@ export class PerfectScrollbarDirective implements OnInit, OnDestroy, DoCheck, On
     }
   }
 
-  public scrollable(direction: string = 'any'): boolean {
+  public scrollable(direction = 'any'): boolean {
     const element = this.elementRef.nativeElement;
 
     if (direction === 'any') {

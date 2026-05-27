@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-pricing.component.css']
 })
 export class AppPricingComponent implements OnInit {
-  isAnnualSelected: boolean = false;
+  isAnnualSelected = false;
   
   constructor() { }
 

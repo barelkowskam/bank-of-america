@@ -14,8 +14,8 @@ export class BasicFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let password = new UntypedFormControl('', Validators.required);
-    let confirmPassword = new UntypedFormControl('');
+    const password = new UntypedFormControl('', Validators.required);
+    const confirmPassword = new UntypedFormControl('');
 
     this.basicForm = new UntypedFormGroup({
       username: new UntypedFormControl('', [

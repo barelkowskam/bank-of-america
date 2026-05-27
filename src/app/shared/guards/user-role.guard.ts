@@ -13,7 +13,7 @@ export class UserRoleGuard implements CanActivate {
   constructor(private router: Router, private jwtAuth: JwtAuthService, private snack: MatSnackBar) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    var user = this.jwtAuth.getUser();
+    const user = this.jwtAuth.getUser();
 
     if (
       user &&

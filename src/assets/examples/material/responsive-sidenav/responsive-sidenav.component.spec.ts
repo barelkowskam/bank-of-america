@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ResponsiveSidenavComponent } from './responsive-sidenav.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ResponsiveSidenavComponent', () => {
   let component: ResponsiveSidenavComponent;
@@ -8,6 +10,8 @@ describe('ResponsiveSidenavComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ ResponsiveSidenavComponent ]
     })
     .compileComponents();

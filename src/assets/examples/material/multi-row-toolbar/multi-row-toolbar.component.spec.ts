@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MultiRowToolbarComponent } from './multi-row-toolbar.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('MultiRowToolbarComponent', () => {
   let component: MultiRowToolbarComponent;
@@ -8,6 +10,8 @@ describe('MultiRowToolbarComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ MultiRowToolbarComponent ]
     })
     .compileComponents();

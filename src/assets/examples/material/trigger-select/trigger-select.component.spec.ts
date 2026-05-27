@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TriggerSelectComponent } from './trigger-select.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TriggerSelectComponent', () => {
   let component: TriggerSelectComponent;
@@ -8,6 +10,8 @@ describe('TriggerSelectComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [NoopAnimationsModule],
       declarations: [ TriggerSelectComponent ]
     })
     .compileComponents();

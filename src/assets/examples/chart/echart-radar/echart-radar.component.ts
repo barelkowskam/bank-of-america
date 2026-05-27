@@ -33,8 +33,8 @@ fancyRadar;
         type: 'scroll',
         bottom: 10,
         data: (function (){
-            var list = [];
-            for (var i = 1; i <=28; i++) {
+            const list = [];
+            for (let i = 1; i <=28; i++) {
                 list.push(i + 2000 + '');
             }
             return list;
@@ -61,8 +61,8 @@ fancyRadar;
         ]
     },
     series : (function (){
-        var series = [];
-        for (var i = 1; i <= 28; i++) {
+        const series = [];
+        for (let i = 1; i <= 28; i++) {
             series.push({
                 name:'Hridoy',
                 type: 'radar',
@@ -98,7 +98,7 @@ fancyRadar;
 loadAQIRadarData() {
 // Schema:
 // date,AQIindex,PM2.5,PM10,CO,NO2,SO2
-var dataBJ = [
+const dataBJ = [
   [55,9,56,0.46,18,6,1],
   [25,11,21,0.65,34,9,2],
   [56,7,63,0.3,14,5,3],
@@ -132,7 +132,7 @@ var dataBJ = [
   [46,5,49,0.28,10,6,31]
 ];
 
-var dataGZ = [
+const dataGZ = [
   [26,37,27,1.163,27,13,1],
   [85,62,71,1.195,60,8,2],
   [78,38,74,1.363,37,7,3],
@@ -166,7 +166,7 @@ var dataGZ = [
   [118,50,0,1.383,76,11,31]
 ];
 
-var dataSH = [
+const dataSH = [
   [91,45,125,0.82,34,23,1],
   [65,27,78,0.86,45,29,2],
   [83,60,84,1.09,73,27,3],
@@ -200,7 +200,7 @@ var dataSH = [
   [187,143,201,1.39,89,53,31]
 ];
 
-var lineStyle = {
+const lineStyle = {
   normal: {
       width: 1,
       opacity: 0.5,

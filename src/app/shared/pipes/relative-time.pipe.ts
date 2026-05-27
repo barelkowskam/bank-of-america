@@ -6,7 +6,7 @@ export class RelativeTimePipe implements PipeTransform {
     if(!(value instanceof Date))
       value = new Date(value);
 
-    let seconds: number = Math.floor(((new Date()).getTime() - value.getTime()) / 1000);
+    const seconds: number = Math.floor(((new Date()).getTime() - value.getTime()) / 1000);
     let interval: number = Math.floor(seconds / 31536000);
     
     if (interval > 1) {
